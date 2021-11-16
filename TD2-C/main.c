@@ -27,14 +27,19 @@ void main2(void)
 {
 pthread_t T1,T2,T3,T4;
 
- pthread_create(&T1,NULL,aff_t,PHRASE1,NULL);
+ pthread_create(&T1,NULL,aff_t,PHRASE1);
  pthread_join( T1, NULL);
- pthread_create(&T2,NULL,aff_t,PHRASE2,NULL);
+ pthread_create(&T2,NULL,aff_t,PHRASE2);
 
  pthread_join( T2, NULL);
- pthread_create(&T3,NULL,aff_t,PHRASE3,NULL);
+ pthread_create(&T3,NULL,aff_t,PHRASE3);
 pthread_join( T3, NULL);
- pthread_create(&T4,NULL,aff_t,PHRASE4,NULL);
+ pthread_create(&T4,NULL,aff_t,PHRASE4);
 pthread_join( T4, NULL);
 
+}
 
+void main(void){
+
+main2();
+}
